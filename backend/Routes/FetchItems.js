@@ -39,7 +39,7 @@ router.get('/categories', verifyToken, async (request, response) => {
         //response = requests.get(f"http://20.244.56.144/products/companies/{company}/categories/{category}/products?top={no_of_products}&minPrice={minPrice}&maxPrice={maxPrice}", headers=headers)
         const products = await axios.get(`http://20.244.56.144/products/companies/${companyName}/categories/${categories}/products?top=${numberOfProducts}&minPrice=${minPrice}&maxPrice=${maxPrice}`, {
             headers: {
-                Authorization: `Bearer ${token}`
+                authorization: `Bearer ${token}`
             }
         });
         console.log(products);
