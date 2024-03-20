@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 import morgan from "morgan";
 import { PORT } from "./config.js";
 import fetchproductrouter from "./Routes/FetchItems.js";
-import getauthtokenrouter from "./Routes/GetAuthToken.js"
 import cors from "cors";
 
 const app = express();
