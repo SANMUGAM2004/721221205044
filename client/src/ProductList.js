@@ -12,23 +12,23 @@ const ProductList = () => {
     maxPrice: 0
   });
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
+//   useEffect(() => {
+//     fetchProducts();
+//   }, []);
 
-  const fetchProducts = async () => {
-    try {
-      const response = await axios.get('/categories');
-      setProducts(response.data);
-    } catch (error) {
-      console.error('Error fetching products:', error);
-    }
-  };
+//   const fetchProducts = async () => {
+//     try {
+//       const response = await axios.get('http://localhost:3001/products/categories');
+//       setProducts(response.data);
+//     } catch (error) {
+//       console.error('Error fetching products:', error);
+//     }
+//   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/categories', formData);
+      const response = await axios.get('http://localhost:3001/products/categories', formData);
       setProducts(response.data);
     } catch (error) {
       console.error('Error fetching products:', error);

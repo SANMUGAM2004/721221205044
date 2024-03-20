@@ -20,4 +20,4 @@ app.listen(PORT,() => {
     console.log(`Welome:${PORT}`);
 });
 
-app.use('/',fetchproductrouter);
+app.use('/products',fetchproductrouter);
